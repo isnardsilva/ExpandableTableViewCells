@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  ExpandableTableViewCells
+
+  Created by Isnard Silva on 22/12/21.
+  
+*/
+
+
+// MARK: - Item List Screen
+"itemListScreenTitle" = "Item List";

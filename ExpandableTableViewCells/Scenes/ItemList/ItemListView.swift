@@ -13,6 +13,11 @@ final class ItemListView: UIView {
     
     
     // MARK: - Subviews
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.reuseIdentifier)
+        return tableView
+    }()
     
     
     // MARK: - Initialization
@@ -31,10 +36,16 @@ final class ItemListView: UIView {
 // MARK: - ViewCodable
 extension ItemListView: ViewCodable {
     func buildViewHierarchy() {
-        
+        addSubview(tableView)
     }
     
     func addConstraints() {
-        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: self.layoutMarginsGuide.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        ])
     }
 }

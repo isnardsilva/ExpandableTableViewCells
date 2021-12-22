@@ -10,3 +10,4 @@ Repositório criado com o intuito de estudar como criar listas a partir do compo
 ## Tecnologias
 - Swift
 - UIKit + View Code
+- SwiftLint

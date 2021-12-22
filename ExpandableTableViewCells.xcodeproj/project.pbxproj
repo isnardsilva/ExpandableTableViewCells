@@ -192,6 +192,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 045C880D2773883C00053C8D /* Build configuration list for PBXNativeTarget "ExpandableTableViewCells" */;
 			buildPhases = (
+				045C882C277393A500053C8D /* SwiftLint */,
 				045C87F52773883B00053C8D /* Sources */,
 				045C87F62773883B00053C8D /* Frameworks */,
 				045C87F72773883B00053C8D /* Resources */,
@@ -250,6 +251,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		045C882C277393A500053C8D /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		045C87F52773883B00053C8D /* Sources */ = {
